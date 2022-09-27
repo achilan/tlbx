@@ -12,6 +12,7 @@ export const FilterComponent = (data) => {
         value={data.filterText}
         onChange={(e) => {
            data.onFilter(e);
+           console.log(data)
         }}
       />
       <Button onClick={data.onClear} variant="outline-secondary" id="button-addon2">
