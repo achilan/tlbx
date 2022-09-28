@@ -50,7 +50,7 @@ export const TableData = (data) => {
 			paginationResetDefaultPage={resetPaginationToggle}
       subHeaderComponent={subHeaderComponentMemo}
       persistTableHead
-      title="Desserts"
+      title="Data"
       columns={columns}
       data={filteredItems}
     />
