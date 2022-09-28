@@ -3,47 +3,31 @@ import { FilterComponent } from "./FilterComponent";
 import { useState,useMemo } from "react";
 const columns = [
   {
-    name: "Title",
-    selector: (row) => row.title,
+    name: "File",
+    selector: (row) => row.file,
     sortable: true,
   },
   {
-    name: "Year",
-    selector: (row) => row.year,
+    name: "Text",
+    selector: (row) => row.text,
     sortable: true,
   },
   {
-    name: "Years",
-    selector: (row) => row.years,
+    name: "Number",
+    selector: (row) => row.number,
+    sortable: true,
+  },
+  {
+    name: "Hex",
+    selector: (row) => row.hex,
     sortable: true,
   },
 ];
 
-const data = [
-  {
-    id: 1,
-    title: "Beetlejuice",
-    year: "1988",
-    years: "1984",
-  },
-  {
-    id: 2,
-    title: "Ghostbusters",
-    year: "1984",
-    years: "1984",
-  },
-  {
-    id: 3,
-    title: "Ghostbusters",
-    year: "1984",
-    years: "1984",
-  },
-];
-
-export const TableData = () => {
+export const TableData = (data) => {
   const [filterText, setFilterText] = useState("");
   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
-  const filteredItems = data.filter((item) => item.title && item.title.toLowerCase().includes(filterText.toLowerCase()));
+  const filteredItems = data.data.filter((item) => item.file && item.file.toLowerCase().includes(filterText.toLowerCase()));
 
   const subHeaderComponentMemo = useMemo(() => {
     const handleClear = () => {

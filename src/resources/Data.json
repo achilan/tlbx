@@ -1,0 +1,8 @@
+{
+    "ENDPOINT":"https://echo-serv.tbxnet.com/v1/secret",
+    "GETFILE":"/file",
+    "GETALLFILE":"/files",
+    "API_KEY":"Bearer aSuperSecretKey",
+    "API":"http://localhost:3001",
+    "FILES":"/files/data"
+}
